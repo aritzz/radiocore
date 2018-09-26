@@ -1,0 +1,71 @@
+.\" Process this file with
+.\" groff -man -Tascii foo.1
+.\" 
+.TH "ARAS.BLOCK" "5" "03 May 2015" "" ""
+.SH "NAME"
+aras.block \- Blocks description file for ARAS \- A Radio Automation System.
+.SH "DESCRIPTION"
+.I aras.block
+The ARAS block description file contains the blocks descriptions for ARAS.
+.SH "OPTIONS"
+.TP 
+The ARAS block file contains comments and some block definition elements, one of them in each line:
+
+.TP 
+Lines with a # character at the beginning are comments.
+
+.TP 
+A block element is defined in a line as follows:
+
+Name    Type    Data
+
+.TP 
+Where:
+
+.TP 
+\fBName\fR is the name of the block, as defined in the aras.schedule file.
+
+.TP 
+\fBType\fR is the block type, it can be: File, Playlist, Random, Randomfile or Interleave.
+
+If the block type is \fIFile\fR, ARAS will play the file whose URI is defined in Data.
+
+If the block type is \fIPlaylist\fR, ARAS will play the m3u playlist file defined in Data.
+
+If the block type is \fIRandom\fR, ARAS will play random files from the directory defined in Data.
+
+If the block type is \fIRandomfile\fR, ARAS will play a random file from the directory defined in Data.
+
+If the block type is \fIInterleave\fR, ARAS will play interleaved files from the blocks defined in Data according to the numeric parameters defined in Data.
+
+.TP 
+\fBData\fR is the block data. It can contain a file URI (both local 
+(file://) or from internet (http://)), a m3u 
+playlist path, a directory path, or the interleaving options, depending on the type of block. Quotation marks should be used if block data contains spaces.
+
+.TP 
+Examples of a block definition are:
+
+my_block  File  file:///home/radio/archive/my_program.ogg
+
+my_block  Playlist  /home/radio/archive/my_playlist.m3u
+
+my_block  Random  /home/radio/archive/
+
+my_block  Randomfile  /home/radio/archive/
+
+my_block  Interleave  "block_1 block_2 4 1"
+
+.SH "AUTHOR"
+.nf 
+ARAS software and documentation written by Erasmo Alonso Iglesias <erasmo1982@users.sourceforge.net>
+Man page edited by Martin Zelaia <martintxo@sindominio.net>
+.SH "SEE ALSO"
+.BR aras.conf (5),
+.BR aras.schedule (5),
+.BR aras.log (5),
+.BR aras\-player (1),
+.BR aras\-daemon (1),
+.BR aras\-recorder (1)
+
+http://aras.sourceforge.net/

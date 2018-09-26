@@ -1,0 +1,35 @@
+
+    ARAS - A Radio Automation System
+    Copyright (C) 2015 Erasmo Alonso Iglesias
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+    INSTALL
+
+    Go to src/ directory and compile ARAS Daemon as follows:
+
+    gcc -Wall main.c read_data.c free_data.c aras.c player.c -o ../bin/aras-daemon $(pkg-config --cflags --libs gstreamer-1.0) -lm
+
+    Configuration files are aras.conf and aras.conf.default, schedule files
+    are aras.schedule and aras.schedule.default and block description files
+    are aras.block and aras.block.default.
+
+    Edit your configuration file, schedule file and block description
+    file and run the program:
+
+    ./aras-daemon aras.conf
+
+    Please send your comments, suggestions or contributions to:
+    Erasmo Alonso Iglesias <erasmo1982@users.sourceforge.net>
+

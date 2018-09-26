@@ -1,0 +1,34 @@
+
+    ARAS - A Radio Automation System
+    Copyright (C) 2015 Erasmo Alonso Iglesias
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+    README
+
+    ARAS is a free broadcast automation system. Project goals are:
+
+        To be reliable
+        To be highly configurable
+        To be multi-platform
+        To be a growing project
+  
+    ARAS can be used in a radio station in order to automate recorded transmissions.
+    It has time signal and interval signal capability.
+
+    ARAS website is aras.sf.net
+
+    Please send your comments, suggestions or contributions to:
+    Erasmo Alonso Iglesias <erasmo1982@users.sourceforge.net>
+

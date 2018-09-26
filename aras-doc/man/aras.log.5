@@ -1,0 +1,53 @@
+.\" Process this file with
+.\" groff -man -Tascii foo.1
+.\" 
+.TH "ARAS.LOG" "5" "03 May 2015" "" ""
+.SH "NAME"
+aras.log \- Log file for ARAS \- A Radio Automation System.
+.SH "DESCRIPTION"
+.I aras.log
+The ARAS log file is generated automatically and contains the ARAS work log.
+.SH "OPTIONS"
+.TP 
+A ARAS log entry is defined in a line as follows:
+
+Date Time Status Data
+
+.TP 
+Where:
+
+.TP 
+\fBDate\fR is the calendar date when the entry has been written, it is represented in extended format according to ISO 8601 standard.
+
+.TP 
+\fBTime\fR is the time of the day when the entry has been written, it is represented in extended format according to ISO 8601 standard.
+
+.TP 
+\fBStatus\fR is the status at the moment of writing the log entry. Status can take some values:
+
+\fILoading block:\fR when ARAS is loading a new block.
+
+\fILoading interval signal block:\fR when ARAS is loading the interval signal block.
+
+\fIPlaying:\fR when ARAS plays a file in any block.
+
+.TP 
+\fBData\fR is the block name, the interval signal block name or a file name, according to the Status value.
+
+.TP 
+An example of a log entry is:
+
+2009\-04\-09   13:33:05   Playing:   http://64.71.184.99:8010
+.SH "AUTHOR"
+.nf 
+ARAS software and documentation written by Erasmo Alonso Iglesias <erasmo1982@users.sourceforge.net>
+Man page edited by Martin Zelaia <martintxo@sindominio.net>
+.SH "SEE ALSO"
+.BR aras.conf (5),
+.BR aras.schedule (5),
+.BR aras.block (5),
+.BR aras\-player (1),
+.BR aras\-daemon (1),
+.BR aras\-recorder (1)
+
+http://aras.sourceforge.net/
